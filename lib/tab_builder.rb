@@ -1,5 +1,6 @@
+require "open_hash"
 require "tab_builder/version"
-
-module TabBuilder
-  # Your code goes here...
-end
+require "tab_builder/tab_set"
+require "tab_builder/tab"
+require "tab_builder/builder"
+require "tab_builder/drawer"
