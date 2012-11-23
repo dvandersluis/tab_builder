@@ -8,9 +8,9 @@ Gem::Specification.new do |gem|
   gem.version       = TabBuilder::VERSION
   gem.authors       = ["Daniel Vandersluis"]
   gem.email         = ["dvandersluis@selfmgmt.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.description   = %q{DSL for building tabbed containers in Rails}
+  gem.summary       = %q{DSL for building tabbed containers in Rails}
+  gem.homepage      = "https://github.com/dvandersluis/tab_builder"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
