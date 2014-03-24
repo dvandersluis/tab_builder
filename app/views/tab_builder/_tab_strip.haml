@@ -1,0 +1,4 @@
+.tabstrip
+  %ul.tabs
+    - tabs.each do |tab|
+      = render partial: 'tab_builder/tab', locals: { tab: tab }

@@ -31,7 +31,8 @@ module TabBuilder
     end
     
     def method_missing(name, *args, &block)
-      tab = Tab.new(self, name, @context, &block)
+      options = args.extract_options!
+      tab = Tab.new(name, @options.merge(options), @context, &block)
       self << tab
     end
   end

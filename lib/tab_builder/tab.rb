@@ -1,12 +1,10 @@
 module TabBuilder
   class Tab
-    attr_accessor :paths, :controller
+    attr_accessor :paths, :controller, :options
     
-    delegate :options, :to => :@tabset
-    
-    def initialize(tabset, name, context, &block)
-      @tabset = tabset
+    def initialize(name, options, context, &block)
       @name = name
+      @options = options
       @context = context
       @current = nil
       
@@ -46,6 +44,10 @@ module TabBuilder
     def current(&block)
       @current = block if block_given?
       @current
+    end
+
+    def tooltip
+      @options[:tooltip]
     end
 
     def method_missing(name, *args, &block)
