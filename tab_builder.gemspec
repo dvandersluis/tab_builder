@@ -21,7 +21,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'activesupport', '> 3.0.0'
   gem.add_dependency 'actionpack', '> 3.0.0'
   gem.add_dependency 'railties', '> 3.0.0'
-  gem.add_dependency 'haml', '~> 4.0.0'
+  gem.add_dependency 'haml', '>= 4.0.0'
   gem.add_dependency 'sass-rails'
   gem.add_dependency 'compass-rails'
   gem.add_dependency 'accessible_tooltip'
