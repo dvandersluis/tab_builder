@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["dvandersluis@selfmgmt.com"]
   gem.description   = %q{DSL for building tabbed containers in Rails}
   gem.summary       = %q{DSL for building tabbed containers in Rails}
-  gem.homepage      = "https://github.com/dvandersluis/tab_builder"
+  gem.homepage      = "https://github.com/talentnest/tab_builder"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
