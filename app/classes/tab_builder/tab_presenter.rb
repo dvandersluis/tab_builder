@@ -16,10 +16,16 @@ module TabBuilder
       tab.tooltip ? tooltip : label
     end
 
+    def badge
+      badge_text = tab.badge_text
+      return nil unless badge_text
+      content_tag(:span, badge_text.to_s, class: 'tab-badge')
+    end
+
   private
 
     def label
-      current? ? content_tag(:span, name) : link_to(name, url)
+      current? ? content_tag(:span, name, style: 'display: inline;') : link_to(name, url, style: 'display: inline;')
     end
 
     def tooltip

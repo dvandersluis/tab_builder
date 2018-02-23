@@ -1,3 +1,5 @@
 - TabBuilder::TabPresenter.new(self, tab).tap do |t|
   %li{ class: t.classes }
-    = t.title
+    %span
+      = t.title
+      = t.badge
