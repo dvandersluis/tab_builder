@@ -1,6 +1,7 @@
 module TabBuilder
   class Tab
     attr_accessor :paths, :controller, :options
+    attr_reader :badge_text
     
     def initialize(name, options, context, &block)
       @name = name
@@ -20,7 +21,7 @@ module TabBuilder
     end
     
     def name
-      I18n.t("#{options.string_prefix}#{@name}")  
+      I18n.t("#{options.string_prefix}#{@name}")
     end
     
     # Define the path(s) for this tab (ie. what paths correspond to this tab)
@@ -48,6 +49,10 @@ module TabBuilder
 
     def tooltip
       @options[:tooltip]
+    end
+
+    def badge(badge_text)
+      @badge_text = badge_text
     end
 
     def method_missing(name, *args, &block)
