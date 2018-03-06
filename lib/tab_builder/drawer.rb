@@ -10,8 +10,8 @@ module TabBuilder
       out = ActiveSupport::SafeBuffer.new
       out << render(partial: 'tab_builder/tab_strip', locals: { tabs: tabset })
             
-      out << content_tag(:div, :class => "tab_content") do
-        content_tag(:div, :class => 'tab_content_inner') { @context.capture(&block) }
+      out << content_tag(:div, class: 'tab-content') do
+        content_tag(:div, class: 'tab_content_inner') { @context.capture(&block) }
       end if block_given?
 
       out
