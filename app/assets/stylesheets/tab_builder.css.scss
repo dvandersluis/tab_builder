@@ -43,7 +43,7 @@ $current_tab_color: #006EB6;
       a, a:hover, span
       {
         text-decoration: none;
-        display: block;
+        display: inline-block;
         padding: 5px 5px 5px 5px;
         color: #000000;
       }
@@ -92,6 +92,7 @@ $current_tab_color: #006EB6;
         background-color: #FFF;
         font-size: 8pt;
         color: #444;
+        margin-right: 4px;
         @include border-radius(4px);
       }
 
@@ -116,9 +117,4 @@ $current_tab_color: #006EB6;
       }
     }
   }
-}
-
-.tab-content
-{
-  padding-top: 15px;
 }

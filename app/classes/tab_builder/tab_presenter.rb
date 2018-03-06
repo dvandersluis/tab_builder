@@ -25,7 +25,7 @@ module TabBuilder
   private
 
     def label
-      current? ? content_tag(:span, name, style: 'display: inline;') : link_to(name, url, style: 'display: inline;')
+      current? ? content_tag(:span, name) : link_to(name, url)
     end
 
     def tooltip
