@@ -3,6 +3,7 @@
  */
 
 @import "compass/css3/border-radius";
+@import "compass/css3/inline-block";
 
 $tab_color: #EEE;
 $current_tab_color: #006EB6;
@@ -21,10 +22,12 @@ $current_tab_color: #006EB6;
     padding: 0;
     margin: 0;
     vertical-align: middle;
+    white-space: nowrap;
 
     li.tab
     {
-      float: left;
+      @include inline-block;
+
       padding: 0;
       margin: 0;
       min-height: 30px;
